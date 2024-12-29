@@ -8,21 +8,44 @@
 
 </head>
 <body>
-    <div class="grid-container">
+    <div id="grid-container" class="grid-container">
+        
         <!-- Boxen werden hier per JavaScript hinzugefügt -->
     </div>
 
     </body>
 <script>
     var toAdd = document.createDocumentFragment();
-        for(var i=0; i < 256; i++) {
-            var newDiv = document.createElement('div');
-            newDiv.id = 'r'+i;
-            newDiv.className = 'ansbox';
-            toAdd.appendChild(newDiv);
-        }
 
-        document.querySelector('.grid-container').appendChild(toAdd);
+    for(var i = 0; i < 256; i++) {
+        var newDiv = document.createElement('div');
+        newDiv.id = 'r' +i;
+        newDiv.className = 'ansbox';
+        toAdd.appendChild(newDiv);
+    }
+
+   
+    const gridContainer = document.querySelector('.grid-container');
+        gridContainer.appendChild(toAdd);
+
+        //console.log(elem.length);
+
+       /* elem.addEventListener(
+                "mouseover",
+                    (event) => {
+                        // highlight the mouseover target
+                        event.target.
+                        console.log("Ich hovere");
+                    })*/
+
+       // Add event listeners for mouseover and mouseout
+       gridContainer.addEventListener("mouseover", (event) => {
+      // Change the class when the mouse is over the element
+        if (event.target.classList.contains("ansbox")) {
+            event.target.classList.remove("ansbox");
+            event.target.classList.remove("ansboxred");
+        }
+        });
 </script>
 
 </html>
