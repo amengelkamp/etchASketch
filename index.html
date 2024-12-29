@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etchASketch</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+
+    </body>
+<script>
+    var toAdd = document.createDocumentFragment();
+        for(var i=0; i < 256; i++) {
+            var newDiv = document.createElement('div');
+            newDiv.id = 'r'+i;
+            newDiv.className = 'ansbox';
+            toAdd.appendChild(newDiv);
+        }
+
+        document.body.appendChild(toAdd);
+
+</script>
+
+</html>
