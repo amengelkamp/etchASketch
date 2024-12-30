@@ -21,6 +21,10 @@
 
 function GetSquareSize() {
   squareNumber = prompt("Please enter the number of squares you desire");
+  if (squareNumber >= 100) {
+    alert("No numbers above or equal to 100 allowed!");
+    return;
+  }
   drawGrid(squareNumber);
 }
 
