@@ -28,22 +28,14 @@
     const gridContainer = document.querySelector('.grid-container');
         gridContainer.appendChild(toAdd);
 
-        //console.log(elem.length);
-
-       /* elem.addEventListener(
-                "mouseover",
-                    (event) => {
-                        // highlight the mouseover target
-                        event.target.
-                        console.log("Ich hovere");
-                    })*/
+    
 
        // Add event listeners for mouseover and mouseout
        gridContainer.addEventListener("mouseover", (event) => {
       // Change the class when the mouse is over the element
         if (event.target.classList.contains("ansbox")) {
             event.target.classList.remove("ansbox");
-            event.target.classList.remove("ansboxred");
+            event.target.classList.add("ansboxred");
         }
         });
 </script>
